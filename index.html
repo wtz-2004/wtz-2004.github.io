@@ -1,0 +1,165 @@
+<style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #f2f1f6;
+        }
+
+        .container {
+            width: 500px;
+            height: 300px;
+            background: #f2f1f6;
+        }
+
+            .container h1 {
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .container img {
+                vertical-align: -70px;
+            }
+
+        .bd {
+            padding-left: 30px;
+        }
+
+        .ft {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            padding: 0 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+        }
+
+        .btn-group {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #p1 {
+        }
+
+        .not-allow {
+            position: relative;
+        }
+
+        #p2 {
+            display: none;
+        }
+
+        .red {
+            margin: 0;
+            font-size: 24px;
+            padding: 30px 40px;
+            color: red;
+            letter-spacing: 4px;
+        }
+
+        .wavy {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+
+        .name {
+            padding-left: 10px;
+        }
+
+        .btn {
+            padding: 6px 12px;
+        }
+        /**
+        * heart标签的样式，一个红色的正方形，
+        * 将最终图像旋转45度，并置于缩小一半、半透明状态，
+        * 设置无限的动效
+        * 单次动效时间3s
+        */
+        heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #e74c3c;
+            transform: rotate(45deg) scale(.5);
+            opacity: .5;
+            animation-name: scale, opacity;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+            /**
+        * 用伪类在heart之前画个圆并左移十像素
+        */
+            heart::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: #e74c3c;
+                border-radius: 50%;
+                transform: translateX(-10px);
+            }
+
+            /**
+        *用伪类在heart之后画个圆并上移十像素
+        */
+
+            heart::after {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: #e74c3c;
+                border-radius: 50%;
+                transform: translateY(-10px);
+            }
+
+        /**
+        * 跳动动效
+        */
+        @keyframes scale {
+
+            25%, 75% {
+                transform: rotate(45deg) scale(1);
+            }
+
+            50%, 100% {
+                transform: rotate(45deg) scale(.5);
+            }
+        }
+        /**
+        * 改变透明度
+        */
+        @keyframes opacity {
+
+            25%, 75% {
+                opacity: 1;
+            }
+
+            50%, 100% {
+                opacity: .5;
+            }
+        }
+    </style>
+<div class="container">
+        <div id="p1">
+            <h1>小志跑路咯</h1>
+            <div class="bd">
+                <img src="https://s1.imagehub.cc/images/2022/08/17/ceeb653ely8gqows3y12tg20a008edgm.gif" border="0" />
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 100px; height: 50px;" >
+        真的很不舍汇迎的大家们，让我这刚出社会的娃娃就遇到这么好的大家，看到了这社会美好的一面，将来遭受了社会的毒打可这么办呀......<br />
+        遭不住了，虽然只待了不到两个月，但还是感受很深，皓珺(jun)姐，晓玲姐的拳意，芝芝姐的大嗓门(狗头保命),碧微姐和湘玲姐的温声细语，俊哥的眼镜遭到袭击，坐在东薄哥后座拿到了人生第一张罚款单，不说多了<br/>
+        说多了免得孩子的眼泪拴不住，还得码代码呢，感谢大家这段时间的照顾了，谢谢大家<br />
+        爱你们
+        <h2>愿我们之间友谊长存，祝大家在未来的日子里梦想和生活同行。<heart></heart></h2>
+    </div>
